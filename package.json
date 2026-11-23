@@ -2,5 +2,5 @@
   "name": "factory-walkthrough",
   "private": true,
   "type": "module",
-  "scripts": { "test": "bun test" }
+  "scripts": { "test": "bun test", "preview": "bun src/preview.ts" }
 }
