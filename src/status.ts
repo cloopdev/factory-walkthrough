@@ -1,13 +1,11 @@
-export interface Status {
+const startedAt = Date.now();
+
+export function status(): {
   status: 'ok';
   service: string;
   version: string;
   uptime: number;
-}
-
-const startedAt = Date.now();
-
-export function status(): Status {
+} {
   return {
     status: 'ok',
     service: 'factory-walkthrough',
