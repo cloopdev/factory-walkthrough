@@ -32,3 +32,11 @@ test('greet with tabs and newlines at edges', () => {
 test('greet preserves case', () => {
   expect(greet('  ADA  ')).toBe('Hello, ADA!');
 });
+
+test('greet with non-breaking spaces', () => {
+  expect(greet('\u00a0Ada\u00a0')).toBe('Hello, Ada!');
+});
+
+test('greet with Unicode em spaces', () => {
+  expect(greet('\u2003Ada\u2003')).toBe('Hello, Ada!');
+});
