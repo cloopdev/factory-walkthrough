@@ -56,3 +56,11 @@ test('greet preserves internal spaces', () => {
 test('greet preserves case', () => {
   expect(greet('  jOhN dOe  ')).toBe('Hello, jOhN dOe!');
 });
+
+test('greet with non-breaking space', () => {
+  expect(greet('\u00a0Ada\u00a0')).toBe('Hello, Ada!');
+});
+
+test('greet with Unicode em space', () => {
+  expect(greet('\u2003Ada\u2003')).toBe('Hello, Ada!');
+});
