@@ -1,3 +1,7 @@
 export function greet(name: string): string {
-  return `Hello, ${name}!`;
+  const trimmedName = name.trim();
+  if (!trimmedName) {
+    return 'Hello, friend!';
+  }
+  return `Hello, ${trimmedName}!`;
 }
